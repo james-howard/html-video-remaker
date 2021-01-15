@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>HTML5 Video Composition</title>
+    <link rel="stylesheet" href="index.css">
+    <script language="javascript" src="index.js" defer></script>
+</head>
+<body>
+    <div id="shelf">
+        <video src="sample/vid1.mp4" autoplay="true" loop="true" playsinline="true" muted="true"></video>
+        <video src="sample/vid2.mp4" autoplay="true" loop="true" playsinline="true" muted="true"></video>
+    </div>
+    <div id="control">
+        <select id="composition_type">
+            <option value="nop">Passthru</option>
+            <option value="crossfade">Crossfade</option>
+        </select>
+        <button id="go">
+            Go
+        </button>
+    </div>
+    <div id="output_div">
+        <canvas id="output" width="960" height="540"></canvas>
+    </div>
+</body>
+</html>
