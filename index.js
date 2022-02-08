@@ -109,8 +109,8 @@ class Size {
 CanvasRenderingContext2D.prototype.drawImageAspectFill = function(image, dstRect) {
     var ctx = this;
     
-    var iw = image.naturalWidth;
-    var ih = image.naturalHeight;
+    var iw = image.naturalWidth ?? image.videoWidth;
+    var ih = image.naturalHeight ?? image.videoHeight;
     if (iw == 0 || ih == 0 || dstRect.size.width == 0 || dstRect.size.height == 0) return;
 
     var srcAspect = iw / ih;    
